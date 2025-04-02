@@ -1,0 +1,20 @@
+html[theme="light"] body {
+  background-color: #fafafa !important;
+}
+
+html[theme="dark"] body {
+  background-color: #2f3040 !important;
+}
+
+.light-dark-icon {
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  > img {
+    width: 20px;
+    height: 20px;
+  }
+}

@@ -1,0 +1,206 @@
+#card-holder {
+  min-width: 400px;
+  height: 100%;
+  margin-top: 30%;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+#create-todo {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  margin-bottom: 20px;
+
+  > :nth-child(2) {
+    border-radius: 10px;
+    border: none;
+  }
+}
+
+.todo-checkbox {
+  position: absolute;
+  z-index: 2;
+}
+
+input[type="checkbox"] {
+  color: red;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 0.5px solid #c3bfbf;
+  margin-left: 15px;
+  z-index: 2;
+  appearance: none;
+}
+
+.todo-input {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding-left: 50px;
+}
+
+.todo-input:focus-visible {
+  outline: none;
+}
+
+#todos-card {
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(79, 71, 71, 0.3);
+  > div > :nth-child(1) {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+}
+
+.todos-options {
+  list-style: none;
+  background: white;
+  padding: 0px;
+  height: 45px;
+  width: 100%;
+  margin: 0px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  > li {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-bottom: 0.5px solid hsl(237deg 6.01% 70.01%);
+
+    > span {
+      width: 80%;
+      padding-left: 15px;
+      font-size: 15px;
+    }
+
+    > input {
+      cursor: pointer;
+      appearance: none;
+    }
+  }
+}
+
+.todos-options input[type="checkbox"]:checked {
+  background-image: linear-gradient(to top, #bc00ffd1, #476fce);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todos-options input[type="checkbox"]::after {
+  content: "✔";
+  font-size: 12px;
+  color: rgb(239, 238, 238);
+  display: none;
+}
+
+.todos-options input[type="checkbox"]:checked::after {
+  display: block;
+}
+
+.todos-options #remove-todo {
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out;
+  cursor: pointer;
+  width: 30px;
+  background: none;
+  border: none;
+}
+
+.todos-options li:hover #remove-todo {
+  visibility: visible;
+  opacity: 1;
+  cursor: pointer;
+}
+
+#todo-footer {
+  display: flex;
+  justify-content: space-around;
+  font-weight: 600;
+  color: grey;
+  height: 40px;
+
+  > button {
+    font-size: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  > div {
+    display: flex;
+    justify-content: space-evenly;
+    width: 40%;
+
+    > button {
+      font-size: 12px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}
+
+#drag-drop-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  margin-top: 15px;
+  color: grey;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+}
+
+.active-option {
+  color: rgb(31, 31, 238);
+}
+
+html[theme="dark"] #create-todo {
+  > input {
+    background-color: #515366;
+    color: white;
+  }
+
+  input::placeholder {
+    color: white;
+  }
+}
+
+html[theme="dark"] #todos-card {
+  > div > ul {
+    background-color: #515366;
+    color: white;
+  }
+}
+
+html[theme="dark"] #todo-footer {
+  background-color: #515366;
+
+  > div,
+  button {
+    color: white;
+  }
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+html[theme="dark"] .active-option {
+  color: #e989da !important;
+}
+
+html[theme="dark"] #remove-todo {
+  color: white;
+}
