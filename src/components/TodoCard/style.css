@@ -129,6 +129,9 @@ input[type="checkbox"] {
   font-weight: 600;
   color: grey;
   height: 40px;
+  background-color: white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 
   > button {
     font-size: 12px;
