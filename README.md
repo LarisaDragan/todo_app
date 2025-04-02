@@ -24,9 +24,8 @@ Users are able to:
 
 ## Screenshots
 
-![light mode](image-2.png)
+![image](https://github.com/user-attachments/assets/b1a4c85e-220c-4306-8173-4879ae513858)
 
-![dark mode](image-3.png)
 
 ## Instalation
 
